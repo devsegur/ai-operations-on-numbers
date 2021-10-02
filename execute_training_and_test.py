@@ -34,7 +34,9 @@ def main(csv_path="data/dataset.csv"):
     predictions_concluded = []
 
     range_for_test = int(len(y) / 2)
-    for i in range(2, range_for_test + 100):
+    initial_range = int(range_for_test * 0.75)
+    final_range = range_for_test + 100
+    for i in range(initial_range, final_range):
         model_regression = train(i, train_X, train_y)
         predicted_result = predict(model_regression, val_X)
         mean_value = mean(predicted_result, val_y)
