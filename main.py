@@ -7,7 +7,7 @@ csv_path = "data/dataset.csv"
 def main():
     print("Starting process")
 
-    dataset_creator.main(csv_path)
+    dataset_creator.main(csv_path, 100)
 
     print("dataset created")
 

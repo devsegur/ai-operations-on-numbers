@@ -21,12 +21,12 @@ def write(sum_list, minus_list, csv_path="data/dataset.csv"):
         spam_writer.writerows(minus_list)
 
 
-def main(csv_path):
+def main(csv_path, length=100):
     sum_list = []
     minus_list = []
 
-    for i in range(1, 800):
-        for j in range(1, 50):
+    for i in range(1, length):
+        for j in range(1, length):
             sum_list.append({
                 "i": i,
                 "j": j,
